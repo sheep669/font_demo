@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>JavaScript弹出框</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
+	</head>
+	<body>
+		<hr >
+		
+		<button type="button" class="btn btn-danger" data-toggle="popover" title="Popover tittle" data-content="loremscsccsccecwcwc">点击弹出/隐藏弹出框</button>
+
+		<script src="js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+		// 找到了button并且加上了popover()方法  默认js
+			$('[data-toggle="popover"]').popover();
+		</script>
+	</body>
+</html>

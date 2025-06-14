@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="./bootstrap.css"/>
+		<style type="text/css">
+			.container{
+				margin-top: 30px;
+			}
+			h2{
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h2>未来七天天气预报</h2>
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th scope="col">日期</th>
+						<th scope="col">天气情况</th>
+						<th scope="col">温度</th>
+						<th scope="col">空气等级</th>
+						<th scope="col">风力</th>
+						<th scope="col">建议</th>
+					</tr>
+				</thead>
+				<tbody class="detail"></tbody>
+			</table>
+		</div>
+	</body>
+	<script id="weather" type="text/html">
+		{{each data}}
+		<tr>
+		<td>{{$value.date}}</td>
+		<td>{{$value.wea}}</td>
+		<td>最低温度:{{$value.tem2}}<sup>.</sup>,最高温度:{{$value.tem1}}<sup>.</sup></td>
+		<td>{{$value.win_speed}}</td>
+		<td>{{$value.air_level}}</td>
+		<td>{{$value.index[0].desc}}</td>
+		</tr>
+		{{/each}}
+	</script>
+	<script src="./jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./template.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		function req(option){
+			var def=$.Deferred(); //jquery的方法
+			if(!option||!option.url){
+				throw Error("url is undefined.");
+			}
+			var _config={
+				type:"get",
+				dataType:"JSON",
+				success:function(res){
+					def.resolve(res);//resolve将def对象的状态为"成功"
+				},
+				error:function(a,b,err){
+					def.reject(err); //通过 reject来改变def对象的状态为"失败"
+				}
+			};
+			$.extend(_config,option,true);
+			$.ajax(_config);
+			return def.promise();//返回def对象的承承诺(promise)
+		}
+		//req 调用
+		var option={
+			//接口
+			url:"https://v0.yiketianqi.com/api?version=v9&appid=59394221&appsecret=sec3chco"
+		};
+		req(option).then(function(weather){
+			console.log(weather.data);
+			var rs={
+				data:weather.data
+			};
+			var txt=template('weather',rs);
+			$('.detail').html(txt);
+			},function(err){
+				console.log(err);
+		})
+	</script>
+</html>

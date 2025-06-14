@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>20091230217 刘洋</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			.header {
+				height: 100px;
+				background-color: rgb(21, 21, 21);
+				text-align: center;
+				color: rgb(213, 211, 211);
+				line-height: 100px;
+				font-size: 25px;
+			}
+
+			#wapper {
+				height: 1500px;
+				background-color: rgb(26, 26, 26);
+			}
+
+			.body {
+				height: 1500px;
+				width: 1300px;
+				margin: 0 auto;
+				background-color: white;
+			}
+
+			.nav {
+				height: 40px;
+				width: 1300px;
+				background-color: rgb(26, 26, 26);
+				margin: 0 auto;
+				line-height: 40px;
+			}
+
+			.nav ul {
+				list-style: none;
+			}
+
+			.nav li {
+				float: left;
+				margin: 0 5px;
+			}
+
+			.main {
+				color: purple;
+				font-size: 22px;
+			}
+
+			a {
+				color: white;
+				font-size: 17.5px;
+			}
+
+			.main:hover {
+				color: white;
+				font-size: 22px;
+			}
+
+			a:hover {
+				color: purple;
+				font-size: 18px;
+			}
+
+			.banner {
+				height: 240px;
+				background-color: black;
+				background-image: url(img/banner.jpg);
+			}
+
+			.display {
+				height: 300px;
+				border: solid green 1px;
+			}
+
+			.footer {
+				height: 30px;
+				background-color: rgb(21, 21, 21);
+				line-height: 30px;
+				color: rgb(213, 211, 211);
+				text-align: center;
+			}
+
+			.display img {
+				height: 130px;
+				width: 220px;
+				float: left;
+				margin-top: 80px;
+				padding: 0 25px 0;
+			}
+
+			.new {
+				background-color: greenyellow;
+				margin: 0 8px 0 1px;
+			}
+
+			.hot {
+				background-color: red;
+				margin: 0 8px 0 1px;
+			}
+
+			.text {
+				margin-top: 102px;
+				margin-left: 550px;
+			}
+
+			.before {
+				text-decoration: line-through;
+				color: gray;
+			}
+
+			.price {
+				color: #f40;
+			}
+
+			.imageview img {
+				height: 300px;
+				width: 400px;
+				float: left;
+				padding: 4px 0px 10px 24px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- header -->
+		<div class="header">
+			买车网
+		</div>
+		<!-- wapper -->
+		<div id="wapper">
+			<!-- body -->
+			<div class="body">
+				<!-- nav -->
+				<div class="nav">
+					<!-- 首页 买新车 逛二手 预约试驾 售后服务 查询经销商 经销商天地 -->
+					<ul>
+						<a href="#" class="main">
+							<li>首页</li>
+						</a>
+						<a href="#">
+							<li>买新车</li>
+						</a>
+						<a href="#">
+							<li>逛二手</li>
+						</a>
+						<a href="#">
+							<li>预约试驾</li>
+						</a>
+						<a href="#">
+							<li>售后服务</li>
+						</a>
+						<a href="#">
+							<li>查询经销商</li>
+						</a>
+						<a href="#">
+							<li>经销商天地</li>
+						</a>
+					</ul>
+				</div>
+				<!-- banner -->
+				<div class="banner">
+
+				</div>
+				<!-- display -->
+				<div class="display">
+					<img src="img/car01.jpg">
+					<p class="text"><span class="new">new</span>
+						2020款 4.0T V8 Volante <br>
+						前置后驱8挡手自一体 <br>
+						原价：<span class="before">￥300.00万</span><br>
+						现价：<span class="price">￥230.80万</span>
+					</p>
+				</div>
+				<div class="display">
+					<img src="img/car02.jpg">
+					<p class="text"><span class="new">new</span>
+						2020款 4.0T V8 Volante 特别版<br>
+						前置后驱8挡手自一体<br>
+						原价：<span class="before">￥300.00万</span><br>
+						现价：<span class="price">￥290.60万</span>
+					</p>
+				</div>
+				<div class="display">
+					<img src="img/car03.jpg">
+					<p class="text"><span class="hot">hot</span>
+						2020款 4.0T V8 Volante 中国色特别版<br />
+						前置后驱8挡手自一体<br>
+						原价：<span class="before">￥300.00万</span><br>
+						现价：<span class="price">￥280.80万</span>
+					</p>
+				</div>
+				<div class="imageview">
+					<!-- 400x300 -->
+					<a href="#"><img src="img/01.jpg" /></a>
+					<a href="#"><img src="img/02.jpg" /></a>
+					<a href="#"><img src="img/03.jpg" /></a>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<p><small>&copy;CopyRight | 2021</small></p>
+		</div>
+	</body>
+</html>

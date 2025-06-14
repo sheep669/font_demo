@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>旅游资讯</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				list-style: none;
+				text-decoration: none;
+			}
+
+			body {
+				position: relative;
+				/* background-color: #f8f8f8; */
+				/* background-color: #a8dffe; */
+				background-color: #b9e5fe;
+			}
+			.im{
+			color: #0C95C4;;
+			}
+			.im:hover{
+				color: white;
+			}
+			.mt3 {
+				margin-top: 3px;
+			}
+
+			.mt3:hover {
+				color: #ffd086;
+				;
+			}
+
+			.color1 {
+				background-color: #ffdf5e;
+			}
+
+			.color2 {
+				background-color: #fea7ca;
+			}
+
+			.color3 {
+				background-color: #9ce280;
+			}
+
+			.color4 {
+				background-color: #45d2c1;
+			}
+
+			.white {
+				color: #fffff8;
+
+			}
+
+			.black {
+				color: black;
+				font-size: 20px;
+			}
+
+			.black_01 {
+				color: black;
+			}
+
+			.gray {
+				color: #666666;
+			}
+
+			font {
+				font-size: 13px;
+				float: right;
+				margin-right: 12px;
+			}
+
+			.green {
+				color: green;
+			}
+
+			/* 清除浮动 */
+			.clearfloat:after {
+				display: block;
+				content: "";
+				height: 0;
+				clear: both;
+				visibility: hidden;
+			}
+
+			/* 溢出隐藏 */
+			.overfl {
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+
+			.imgch:hover {
+				transform: scale(1.2);
+				transition-duration: 0.5s;
+			}
+
+			.imgchange:hover {
+				transform: scale(1.04);
+				transition-duration: 0.5s;
+			}
+
+			.imgchanges:hover {
+				transform: scale(0.97);
+				transition-duration: 0.5s;
+			}
+
+			#action-list {
+				height: 30px;
+				background-color: #111111;
+				border-bottom: #4883CF 0.5px solid;
+			}
+
+			#action-list .left {
+				float: left;
+				position: absolute;
+				left: 358px;
+			}
+
+			#action-list .left .tittle {
+				color: #4883cf;
+			}
+
+			#action-list .left li {
+				float: left;
+				color: white;
+				margin-top: 4px;
+				margin-left: 20px;
+			}
+
+
+			#action-list .right {
+				position: absolute;
+				right: 15px;
+			}
+
+
+			#action-list .right li {
+				color: white;
+				float: left;
+				margin-top: 4px;
+				margin-right: 20px;
+			}
+
+			#action-list .right .text1 {
+				color: #4883cf;
+			}
+
+			#action-list .right .text2 {
+				color: white;
+			}
+
+
+			.img img {
+				width: 22px;
+				vertical-align: middle;
+			}
+
+			#header {
+				width: 100%;
+				height: 130px;
+				background-color: #181818;
+			}
+
+			#nav {
+				position: relative;
+			}
+
+			#nav .nav {
+				position: absolute;
+				top: 46px;
+				left: 500px;
+			}
+
+			#nav .nav li {
+				float: left;
+				color: white;
+				font-size: 24px;
+				margin-right: 20px;
+			}
+
+			#nav .nav li .white:hover {
+				color: #0C95C4;
+			}
+
+			#header .logo {
+				position: absolute;
+				z-index: 999;
+				top: 0;
+			}
+
+			#header #right {
+				float: right;
+			}
+
+			#header #right input {
+				background: url(img/search.png)no-repeat right 4px center;
+				padding: 5px;
+				margin-top: 46.5px;
+				margin-right: 150px;
+				height: 19px;
+				width: 250px;
+				border: #4883CF 1px solid;
+				background-color: whitesmoke;
+				border-radius: 5px;
+			}
+
+			#ad {
+				height: 400px;
+				position: fixed;
+				/* background-color: #a8dffe; */
+				top: 560px;
+				right: 60px;
+			}
+
+			#ad .ad li {
+				height: 50px;
+				margin-top: 16px;
+			}
+
+			#ad .ad img {
+				width: 38.5px;
+			}
+
+			#wrapper {
+				width: 1880px;
+				height: 1630px;
+				margin: 0 auto;
+				/* background-color: red; */
+				/* background-color: #ffffff; */
+				/* background-color: #a8dffe; */
+			}
+
+			.content {
+				width: 1580px;
+				height: 1630px;
+				/* background-color: green; */
+				/* background-color: #ffffff; */
+				margin: 20px auto;
+			}
+
+			#wrapper .content .h_box {
+				height: 350px;
+				background-color: yellow;
+				margin-bottom: 20px;
+			}
+
+			#wrapper .content .h_box .left_con {
+				float: left;
+				width: 750px;
+				height: 350px;
+				/* background-color: plum; */
+				background-color: #ffffff;
+			}
+
+			#wrapper .content .h_box .right_con {
+				float: right;
+				background-color: #ffffff;
+				width: 830px;
+				height: 340px;
+				line-height: 30px;
+				padding-top: 10px;
+			}
+
+			#wrapper .content .h_box .right_con p {
+				margin-top: 12px;
+				margin-bottom: 10px;
+			}
+
+			#wrapper .content .box {
+				height: 350px;
+				background-color: blueviolet;
+				margin-bottom: 20px;
+			}
+
+			#wrapper .content .box .left_con {
+				float: left;
+				width: 900px;
+				height: 350px;
+				background-color: plum;
+				background-color: #ffffff;
+			}
+
+			#wrapper .content .box .left_con img {
+				float: left;
+			}
+
+			#wrapper .content .box .left_con .con_01 {
+				line-height: 29px;
+			}
+
+			#wrapper .content .box .left_con .con_01 h2 {
+				font-size: 20px;
+			}
+
+			#wrapper .content .box .left_con .con_01 .imtitle {
+				margin-top: 12px;
+				float: left;
+				font-size: 28px;
+				font-weight: bold;
+				/* margin-left: 12px; */
+
+			}
+
+			#wrapper .content .box .left_con .con_01 .con_01_li {
+				margin-top: 12px;
+				margin-left: 100px;
+				float: left;
+
+			}
+
+			#wrapper .content .box .left_con .con_01 .con_01_li .more {
+				margin-left: 70px;
+			}
+
+			#wrapper .content .box .left_con .con_01 .con_01_li .more a:hover {
+				color: #ffdaa0;
+			}
+
+			#wrapper .content .box .right_con {
+				float: right;
+				/* background-color: #3EA1F8; */
+				background-color: #ffffff;
+				width: 680px;
+				height: 350px;
+			}
+			#wrapper .content .box .right_con img{
+				margin-top: 8px;
+				margin-left: 12px;
+			}
+
+			#wrapper .content .m_box {
+				height: 450px;
+				/* background-color: black; */
+				margin-top: 30px;
+				padding-left: 12px;
+			}
+
+			#wrapper .content .m_box .m_box_c {
+				width: 380px;
+				height: 505px;
+				margin-right: 12px;
+				/* background-color: yellow; */
+				background-color: #ffffff;
+				float: left;
+				line-height: 32px;
+			}
+
+			#wrapper .content .m_box .m_box_c .ename {
+				margin-left: 2px;
+				font-size: 13px;
+			}
+
+			#wrapper .content .m_box .m_box_c img {
+				margin-top: 10px;
+				width: 380px;
+			}
+
+			#footer {
+				/* margin-top: 12px;
+				height: 614px; */
+				/* margin-bottom: 120px; */
+				margin-top: 12px;
+				background-color: #282828;
+			}
+
+			#footer .footer {
+				height: 614px;
+				width: 1640px;
+				margin: 0 auto;
+				/* 	background-color: green; */
+			}
+
+			#footer .footer .footer-top {
+				height: 380px;
+				background-color: #282828;
+			}
+
+			#footer .footer .footer-top .left {
+				height: 380px;
+				float: left;
+				background-color: red;
+				background-color: #282828;
+				width: 600px;
+			}
+
+			#footer .footer .footer-top .left .wbesite-desc {
+				margin-left: 13px;
+				float: left;
+				height: 380px;
+				width: 220px;
+				background-color: #282828;
+				/* background-color: yellow; */
+				text-align: left;
+				line-height: 40px;
+				font-size: 17px;
+				font-family: "Microsoft YaHei", 'Arial Black';
+				color: #fff;
+				text-shadow: 2px 2px 5px #a5a5a5;
+			}
+
+			#footer .footer .footer-top .left .wbesite-desc .footer-tittle {
+				display: block;
+				margin-top: 75px;
+				font-size: 30px;
+				font-family: "Microsoft YaHei", 'Arial Black';
+				color: #fff;
+				text-shadow: 2px 2px 5px #a5a5a5;
+			}
+
+			#footer .footer .footer-top .left .OfficialConnect {
+				float: left;
+				height: 380px;
+				width: 300px;
+				background-color: #282828;
+				text-align: center;
+				color: #a5a5a5;
+			}
+
+			#footer .footer .footer-top .left .OfficialConnect img {
+				margin-top: 76px;
+				/* margin-right: 20px; */
+				border-radius: 5px;
+			}
+
+			#footer .footer .footer-top .middle {
+				height: 380px;
+				float: left;
+				border-left: 2px #181818 solid;
+				background-color: #282828;
+				width: 500px;
+			}
+
+			#footer .footer .footer-top .middle a {
+				display: block;
+				margin-top: 80px;
+				text-align: center;
+				color: #4883cf;
+				font-size: 30px;
+				font-family: "Microsoft YaHei", 'Arial Black';
+				font-weight: bold;
+			}
+
+			#footer .footer .footer-top .middle ul {
+				float: left;
+				margin-top: 45px;
+				margin-left: 45px;
+			}
+
+			#footer .footer .footer-top .middle ul li {
+				list-style: disc;
+				color: white;
+				line-height: 32px;
+			}
+
+			#footer .footer .footer-top .right {
+				height: 380px;
+				float: left;
+				border-left: 2px #181818 solid;
+				background-color: #282828;
+				width: 536px;
+				color: white;
+			}
+
+			#footer .footer .footer-top .right .text {
+				color: #4883cf;
+				font-size: 25px;
+				font-family: "Microsoft YaHei", 'Arial Black';
+				font-weight: bold;
+				display: block;
+				margin-top: 90px;
+				margin-left: 26px;
+			}
+
+			#footer .footer .footer-top .right .email {
+				color: #a5a5a5;
+				font-size: 18px;
+				font-weight: bold;
+				display: block;
+				margin-top: 4px;
+			}
+
+			#footer .footer .footer-top .right img {
+				float: left;
+				margin-left: 25px;
+				margin-right: 4px;
+			}
+
+
+			#footer .footer .footer-bottom {
+				margin-top: 12px;
+				border-top: 2px #181818 solid;
+				height: 220px;
+				background-color: #282828;
+				color: #d4ffff;
+				text-align: center;
+				line-height: 80px;
+				font-size: 18px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- ad -->
+		<div id="ad">
+			<ul class="ad">
+				<li><img src="img/爱心.png"></li>
+				<li><img src="img/联系我们.png"></li>
+				<li><img src="img/问卷.png"></li>
+				<li> <a href="#"><img src="img/回到顶部.png"></a></li>
+			</ul>
+
+		</div>
+		<!-- action-list -->
+		<div id="action-list">
+			<ul class="left">
+				<li class="tittle">让旅行更幸福</li>
+				<li class="icon">Language</li>
+				<li>网站无障碍</li>
+			</ul>
+			<ul class="right">
+				<li><a class="text1" href="login.html" target="_blank">您好，请登陆</a></li>
+				<li><a class="text2" href="register.html" target="_blank">免费注册</a> </li>
+				<li>消息 </li>
+				<li>我的历史</li>
+				<li>客服中心 </li>
+				<li class="img"><img src="img/phone.png"></li>
+				<li class="img"><img src="img/wechat.png"></li>
+			</ul>
+		</div>
+
+
+		<!-- header -->
+		<div id="header">
+			<!-- logo -->
+			<div class="logo">
+				<img src="img/logo.jpg" height="160.5px">
+			</div>
+
+
+			<!-- nav -->
+			<div id="nav">
+				<ul class="nav">
+
+					<li><a href="index.html" class="white">首页</a></li>
+					<li><a href="ChangZhouDesc.html" target="_blank" class="white">常州概况</a></li>
+					<li><a href="#" target="_blank" class="im">旅游资讯</a></li>
+					<li><a href="view.html" target="_blank" class="white">景区</a></li>
+					<li><a href="strategy.html" target="_blank" class="white">攻略</a></li>
+					<li><a href="route.html" target="_blank" class="white">线路</a></li>
+					<li><a href="#" target="_blank" class="white">美食</a></li>
+					<li><a href="#" target="_blank" class="white">酒店</a></li>
+					<li><a href="#" target="_blank" class="white">购物</a></li>
+					<li><a href="#" target="_blank" class="white">交通</a></li>
+					<li><a href="#" target="_blank" class="white">探索更多</a></li>
+				</ul>
+				<div id="right">
+					<span>
+						<form action="#" method="post">
+							<input type="text" placeholder="搜你想搜" />
+						</form>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div id="wrapper">
+
+			<div class="content">
+				<div class="h_box">
+					<div class="left_con">
+						<img src="img/left_banner.png">
+					</div>
+					<div class="right_con">
+						<a href="#">
+							<h2 class="black">我国在线旅游消费总额已达万亿级</h2>
+							<p class="gray">文化和旅游部数据中心7日发布的《全国“互联网+旅游”发展报告（2021）》显示，春节期间全国景区接待预约游客的比例高...</p>
+						</a>
+						<a href="#" class="white">
+							<h2 class="black">厦门园博苑5月1日起免费对外开放</h2>
+							<p class="gray"> 近日，福建省厦门市市政园林局召开新闻发布会宣布，为庆祝建党100周年和厦门经济特区建设40周年，从今年5月1日起，厦门园博苑将...</p>
+						</a>
+						<a href="#">
+							<h2 class="black">如何推动旅游业 “恢复元气”</h2>
+							<p class="gray">今年以来，旅游业遭受疫情严重冲击，在中国率先复产复工的进程中，第三产业尤其是旅游业恢复相对缓慢。如何进一步促进我国旅游业</p>
+						</a>
+
+					</div>
+				</div>
+				<div class="box">
+					<div class="left_con"><img src="img/left_pic01.png">
+						<div class="con_01">
+							<span class="imtitle">国内游资讯</span>
+							<div class="con_01_li">
+								<a href="#" target="_blank">云南</a>
+								<a href="#" target="_blank">青海</a>
+								<a href="#" target="_blank">西藏</a>
+								<a href="#" target="_blank">广西</a>
+								<a href="#" target="_blank">海南</a>
+								<a href="#" target=" _blank">四川</a>
+								<font class="more"><a
+										href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;更多&gt;</a>
+								</font>
+							</div>
+							<div>
+								<br>
+								<br>
+								<h2><a href="#" target="_blank">开启长三角文旅消费新纪元，融创上海集团和携程旅游启动战略合作</a></h2>
+								<div class="gray">
+									【导读】2021年6月23日,融创上海集团与携程旅游共同签署长三角区域文旅发展深度战略协议,双方将共同助力长三角文旅高质量发展,谋划文旅产...
+									<a href="#" target="_blank" class="green">查看详情&gt;</a>
+								</div>
+								<ul>
+									<li>
+										<font>2021-06-25</font> <a href="#" class="blue">[台州]</a><a href="#"
+											class="black_01">金台铁路通车磐安、仙居将结束不通铁路的历史</a>
+									</li>
+									<li>
+										<font>2021-06-25</font> <a href="#" class="blue">[上海]</a><a href="#"
+											class="black_01">毕业旅行热度攀升“后高考经济”带来强劲消费</a>
+									</li>
+									<li>
+										<font>2021-06-25</font> <a href="#" class="blue">[北京]</a><a href="#"
+											class="black_01">“新发展格局下，中国实景娱乐的新机遇”研讨会在京召开</a>
+									</li>
+									<li>
+										<font>2021-06-24</font> <a href="#" class="blue">[石家庄]</a><a href="#"
+											class="black_01">河北白石山景区7月对全国党员免门票</a>
+									</li>
+									<li>
+										<font>2021-06-24</font> <a href="#" class="blue">[北京]</a><a href="#"
+											class="black_01">添丁进口！旅日大熊猫“香香”产下两只宝宝</a>
+									</li>
+									<li>
+										<font>2021-06-24</font> <a href="#" class="blue">[北京]</a><a href="#"
+											class="black_01">文旅部：推动高校图书馆等文化设施向社会开放</a>
+									</li>
+									<li>
+										<font>2021-06-24</font> <a href="#" class="blue">[厦门]</a><a href="#"
+											class="black_01">好消息!厦门13家3A级以上景区对全国公安民警免费开放!</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="right_con">
+						<img src="img/right_pic02.png">
+					</div>
+				</div>
+				<div class="box">
+					<div class="left_con">
+						<div class="left_con"><img src="img/left_pic02.png">
+							<div class="con_01">
+								<span class="imtitle">出境游资讯</span>
+								<div class="con_01_li">
+
+									<a href="#" target="_blank">英国</a>
+									<a href="#" target="_blank">美国</a>
+									<a href="#" target="_blank">澳大利亚</a>
+									<a href="#" target="_blank">德国</a>
+									<a href="#" target="_blank">日本</a>
+									<font class="more"><a
+											href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;更多&gt;</a>
+									</font>
+								</div>
+								<div>
+									<br>
+									<br>
+									<h2><a href="#" target="_blank">疫情形势严峻 马来西亚宣布实施全国“全面封锁”</a></h2>
+									<div class="gray">
+										【导读】吉隆坡5月28日电（记者林昊 郁玮）马来西亚政府28日晚间宣布，鉴于国内新冠疫情形势严峻，决定从6月1日开始在全国范围内实施...
+										<a href="#" target="_blank" class="green">查看详情&gt;</a>
+									</div>
+									<ul>
+										<li>
+											<font>2021-05-25</font> <a href="#" class="blue">[印度]</a><a href="#"
+												class="black_01">印度或将遭遇第三轮疫情</a>
+										</li>
+										<li>
+											<font>2021-05-25</font> <a href="#" class="blue">[刚果]</a><a href="#"
+												class="black_01">刚果(金)火山喷发致多人死亡 170名儿童仍然失联</a>
+										</li>
+										<li>
+											<font>2021-03-25</font> <a href="#" class="blue">[沙特]</a><a href="#"
+												class="black_01">沙特阿拉伯旅游局重磅推出“阿拉伯之旅”中国云推介</a>
+										</li>
+										<li>
+											<font>2020-12-22</font> <a href="#" class="blue">[韩国]</a><a href="#"
+												class="black_01">釜山加速成长成为世界一流的医疗观光城市</a>
+										</li>
+										<li>
+											<font>2020-12-03</font> <a href="#" class="blue">[日本]</a><a href="#"
+												class="black_01">撑起日本制造，日本岐阜县产品的魅力</a>
+										</li>
+										<li>
+											<font>2020-12-03</font> <a href="#" class="blue">[北京]</a><a href="#"
+												class="black_01">中国公民出国出境安全提示</a>
+										</li>
+										<li>
+											<font>2020-11-30</font> <a href="#" class="blue">[日本]</a><a href="#"
+												class="black_01">日本顶尖时尚购物中心PARCO入驻大阪心斋桥啦！</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="right_con">
+						<img src="img/right_pic01.png">
+					</div>
+				</div>
+				<div class="m_box">
+					<div class="m_box_c">
+						交通资讯<span class="ename">Traffic</span>
+						<a href="#">
+							<font class="mt3">更多&gt;</font>
+						</a>
+						<img src="img/top_pic01.png" />
+						<ul>
+							<li>●机票均价已达1150元!暑期“旅游季”来了</li>
+							<li>●复兴号上高原!拉萨至林芝铁路6月25日开通运营</li>
+							<li>●618福利惊喜返场 哈弗踏实宠你踏实送福利</li>
+							<li>●韩亚航空重开塞班航班!</li>
+							<li>●穿戈壁走天山 哈弗大狗潮野不停歇驭见大美新疆</li>
+							<li>●遇见神车,哈弗618宠粉狂欢节累计订单破万!</li>
+							<li>●乘风破浪的姐姐黄圣依倾情助阵 哈弗618不可错过！</li>
+							<li>●武汉新添4个国家级非遗项目 非遗总数达659项</li>
+						</ul>
+					</div>
+					<div class="m_box_c">
+						酒店资讯<span class="ename">Hotel</span>
+						<a href="#">
+							<font class="mt3">更多&gt;</font>
+						</a>
+						<img src="img/top_pic02.png" />
+						<ul>
+							<li>●木莲庄酒店荣膺迈点MBI 2020年度两项大奖...</li>
+							<li>●夏天最值得打卡旅行目的地!住进途家高颜值美宿...</li>
+							<li>●大众点评2021“必住榜”发布，恒大酒店连占四席</li>
+							<li>●民族酒店品牌受追捧 北京海湾半山618创千万业绩</li>
+							<li>●暑期出游好去处!那些隐藏在海边的神仙美宿...</li>
+							<li>●延安万达嘉华及万达锦华酒店隆重开业</li>
+							<li>●途家《端午秘境榜》公布十大宝藏目的地...</li>
+							<li>●高考民宿火爆提前10天抢订!</li>
+						</ul>
+					</div>
+					<div class="m_box_c">
+						景区资讯<span class="ename">&nbsp;Attractions Information</span>
+						<a href="#">
+							<font class="mt3">更多&gt;</font>
+						</a>
+						<img src="img/top_pic03.png" />
+						<ul>
+							<li>●中国景区探索“游戏+旅游”吸引年轻游客</li>
+							<li>●华谊兄弟（济南）电影小镇6月26日盛装开业</li>
+							<li>●太原举办传统文化进景区活动</li>
+							<li>●甘肃省红色旅游经典景区讲解员培训班开班</li>
+							<li>●八路军豫西抗日根据地王彦纪念馆17日开馆!</li>
+							<li>●厦门发布方案：鼓励景区景点设公众免费开放日</li>
+							<li>●天柱山凤凰源漂流文化旅游节开幕</li>
+							<li>●湖北A级旅游景区提质惠民：18家景区门票免费</li>
+						</ul>
+					</div>
+					<div class="m_box_c">
+						旅行社资讯<span class="ename">Travel</span>
+						<a href="#">
+							<font class="mt3">更多&gt;</font>
+						</a>
+						<img src="img/top_pic04.png" />
+						<ul>
+							<li>●贵州省旅游包机、专列、自驾游专项奖励政策出炉</li>
+							<li>●昆明：夜旅游项目最高可获20万元奖补</li>
+							<li>●湖北出台19条普惠金融政策 支持文旅企业发展</li>
+							<li>●塔里木河下游湿地生物明显增多...</li>
+							<li>●游客偏离正常游览路线导致受伤旅行社无需担责!</li>
+							<li>●一季度全国旅行社国内旅游组织1187.27万人次</li>
+							<li>●秦皇岛市推行旅行社设立许可告知承诺</li>
+							<li>●文化和旅游部办公厅关于开展在线培训工作的通知</li>
+						</ul>
+					</div>
+
+				</div>
+
+
+
+			</div>
+
+
+		</div>
+		<!-- footer -->
+		<div id="footer">
+			<div class="footer">
+				<div class="footer-top">
+					<div class="left">
+						<div class="wbesite-desc">
+							<span class="footer-tittle">常州旅游网</span>
+							<br>常州市文化和旅游局
+							<br>文旅宣传推广官方网站
+							<br>全国十佳旅游目的地网站
+						</div>
+						<div class="OfficialConnect">
+							<img src="img/OfficialAcccount.jpg">
+							<br>
+							更多精彩内容请关注<br>
+							常州市文旅局官方微信
+						</div>
+					</div>
+					<div class="middle">
+						<a href="index.html" target="_blank">www.cztws.com</a>
+						<ul class="list01">
+							<li>常州概况</li>
+							<li>会议展览</li>
+							<li>节庆活动</li>
+							<li>旅游攻略</li>
+							<li>常州市文旅局官方微博</li>
+						</ul>
+						<ul class="list02">
+							<li>景区 线路 美食 酒店 购物 交通</li>
+							<li>旅游资讯</li>
+							<li>旅游线路</li>
+							<li>旅游贴士</li>
+						</ul>
+					</div>
+					<div class="right">
+						<span class="text">联系我们</span>
+						<br>
+						<img class="imgch" src="img/邮箱.png">
+						<span class="email">2965184610@qq.com</span>
+					</div>
+				</div>
+				<div class="footer-bottom">
+					Copyright © 2021 All Right Reserved
+				</div>
+
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>JavaScript插件</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
+	</head>
+	<body>
+		<div class="container">
+			<!-- 选项卡 -->
+			<!-- data-toggle="tab" 加了点击才有效 -->
+			<ul class="nav nav-tabs">
+				<li><a href="#pan1" data-toggle="tab">收录</a></li>
+				<li><a href="#pan2" data-toggle="tab">常规</a></li>
+				<li><a href="#pan3" data-toggle="tab">查看</a></li>
+				<li><a href="#pan4" data-toggle="tab">高级</a></li>
+			</ul>
+			<!--面板 -->
+			<div class="tab-content">
+				<div class="tab-pane active" id="pan1">
+					收录面板收录面板收录面板收录面板收录面板收录面板收录面板收录面板
+				</div>
+				<div class="tab-pane" id="pan2">
+					常规面板常规面板常规面板常规面板常规面板常规面板常规面板常规面板
+				</div>
+				<div class="tab-pane" id="pan3">
+					查看面板查看面板查看面板查看面板查看面板查看面板查看面板查看面板
+				</div>
+				<div class="tab-pane" id="pan4">
+					高级面板高级面板高级面板高级面板高级面板高级面板高级面板高级面板
+				</div>
+			</div>
+			
+			<hr >
+			
+			<!-- 胶囊式 -->
+			<!-- data-toggle="pill" 加了点击才有效 -->
+			<ul class="nav nav-pills">
+				<li><a href="#pan5" data-toggle="pill">收录</a></li>
+				<li><a href="#pan6" data-toggle="pill">常规</a></li>
+				<li><a href="#pan7" data-toggle="pill">查看</a></li>
+				<li><a href="#pan8" data-toggle="pill">高级</a></li>
+			</ul>
+			<!--面板 -->
+			<div class="tab-content">
+				<div class="tab-pane active" id="pan5">
+					收录面板收录面板收录面板收录面板收录面板收录面板收录面板收录面板
+				</div>
+				<!-- fade in 面板加动画 -->
+				<div class="tab-pane fade in" id="pan6">
+					常规面板常规面板常规面板常规面板常规面板常规面板常规面板常规面板
+				</div>
+				<div class="tab-pane fade in" id="pan7">
+					查看面板查看面板查看面板查看面板查看面板查看面板查看面板查看面板
+				</div>
+				<div class="tab-pane fade in" id="pan8">
+					高级面板高级面板高级面板高级面板高级面板高级面板高级面板高级面板
+				</div>
+			</div>
+		</div>
+
+                 <hr >
+         <!-- js用法 -->
+		 <div class="container">
+		 	<!-- 选项卡 -->
+		 	<ul class="nav nav-tabs" id="mytab">
+		 		<li><a href="#pan9">收录</a></li>
+		 		<li><a href="#pan10">常规</a></li>
+		 		<li><a href="#pan11">查看</a></li>
+		 		<li><a href="#pan12">高级</a></li>
+		 	</ul>
+		 	<!--面板 -->
+		 	<div class="tab-content">
+		 		<div class="tab-pane active" id="pan9">
+		 			收录面板收录面板收录面板收录面板收录面板收录面板收录面板收录面板
+		 		</div>
+		 		<div class="tab-pane" id="pan10">
+		 			常规面板常规面板常规面板常规面板常规面板常规面板常规面板常规面板
+		 		</div>
+		 		<div class="tab-pane" id="pan11">
+		 			查看面板查看面板查看面板查看面板查看面板查看面板查看面板查看面板
+		 		</div>
+		 		<div class="tab-pane" id="pan12">
+		 			高级面板高级面板高级面板高级面板高级面板高级面板高级面板高级面板
+		 		</div>
+		 	</div>
+		 </div>
+		 
+		 
+		 
+		 
+		<script src="js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+		<!-- js用法 -->
+		<script type="text/javascript">
+				$('#mytab a').click(function (e) {
+				  e.preventDefault();
+				  // tab('show') 显示面板
+				  $(this).tab('show')
+				});		
+		</script>
+	</body>
+</html>

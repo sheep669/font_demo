@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.free-badge {
+				position: absolute;
+				top: 15px;
+				right: 15px;
+				background: #ffeb3b;
+				font-family: 'Poppins', sans-serif;
+				font-weight: 700;
+				text-transform: uppercase;
+				padding: 5px 25px;
+				font-size: 13px;
+				transform: rotate(90deg);
+				border-radius: 3px 0 0 6px
+			}
+
+			.free-badge b {
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 9px 0 0 6px;
+				border-color: transparent transparent transparent #ecda34;
+				position: absolute;
+				top: -7px;
+				left: 2px;
+				transform: rotate(-90deg)
+			}
+
+			.free-badge:after {
+				content: '';
+				width: 0;
+				height: 0;
+				position: absolute;
+				border-style: solid;
+				border-width: 0 14.5px 10.5px 0;
+				border-color: transparent #ffeb3b transparent transparent;
+				transform: rotate(-90deg);
+				top: 3px;
+				right: -12px
+			}
+
+			.free-badge:before {
+				content: '';
+				width: 0;
+				height: 0;
+				position: absolute;
+				border-style: solid;
+				border-width: 10.5px 14.5px 0 0;
+				border-color: #ffeb3b transparent transparent;
+				transform: rotate(-90deg);
+				bottom: 3px;
+				right: -12px
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 通过定位布局去放到自己想要放的地方 -->
+		<span class="free-badge" style="margin-top: 30px;"><b></b>HOT</span>
+	</body>
+</html>

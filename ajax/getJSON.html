@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script src="./js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+             // $.getJSON("请求地址",{参数,没有可以不填},function(data){})  data:后台返回的数据
+			$.getJSON("js/data.json",{},function(data){
+				console.log(data);
+                //操作dom即可
+			});
+		</script>
+	</body>
+</html>

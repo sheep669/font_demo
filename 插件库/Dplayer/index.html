@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="./css/logo.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer@1.25.0/dist/DPlayer.min.css">
+		<style type="text/css">
+			#dplayer{
+				/* 设计宽高 */
+				width: 1000px;
+				height: 650px;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="dplayer"></div>
+		<script src="https://cdn.jsdelivr.net/npm/hls.js@1.1.1/dist/hls.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/dplayer@1.25.0/dist/DPlayer.min.js"></script>
+		<script type="text/javascript">
+			var dp = new DPlayer({
+				// 定位容器
+			    container: document.getElementById('dplayer'),
+				// 开启截图
+			    screenshot: true,
+				// 开启热键，支持快进、快退、音量控制、播放暂停
+				// hotkey:true,
+				// 左上角logo
+				// logo:"",
+			    video: {
+					// 视频源
+			        url: './img/countdown.mp4',
+					// 封面图
+			        pic: './img/spiderman.jpg',
+			    },
+			});
+		</script>
+		
+		<!-- 了解更多:访问 http://dplayer.js.org/zh/guide.html#special-thanks -->
+	</body>
+</html>

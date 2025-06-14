@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// var xhr = new XMLHttpRequest();
+			// open(请求方式,服务端的访问地址,异步还是同步);
+			// open("get", "loginServlet", true);
+			// send():使用异步对象发送请求
+			// send();
+			// XMLHttpRequest属性 
+			// (1)readyState -->请求的状态
+			//0:表示创建异步对象时 
+			//1:表示初始异步对象的请求参数.执行open()方法
+			//2:使用send()方法发送请求
+			//3:使用异步对象从服务器接受了数据
+			//4:异步对象接收了数据,并在异步对象内部处理完成后
+			// (2)status -->网络的状态,和Http的状态码对应
+			// 200:请求成功
+			// 404:服务器资源没有找到
+			// 500:服务器内部代码有错误
+			// (3)responseText -->表示服务器端返回的数据
+			// 例如
+			// var data = xhr.responseText;
+			//拿到了数据,接着就可以数据展示了,即操作dom
+			// -----------------------------
+			var xhr = new XMLHttpRequest(); //js实例化XMLHttpRequest对象
+			xhr.onreadystatechange = function() { //给异步对象绑定事件,事件名--> onreadystatechange
+				if (xhr.readyState == 4 && xhr.status == 200) {
+					// 从服务器获取了数据,更新当前页面的dom对象,完成处理请求
+					var data = xhr.responseText;
+					//更新dom
+					document.getElementById("#myselect").innerHTML = data;
+				}
+			}
+			//初始化请求的参数,执行open()函数
+			xhr.open("GET", "loginServlet", true);
+			//发送请求
+			xhr.send();
+		</script>
+
+
+
+
+
+
+	</body>
+</html>

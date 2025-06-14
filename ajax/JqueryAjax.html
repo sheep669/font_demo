@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button type="button" id="btn">点击</button>
+		<script src="./js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			// $.ajax({
+			// 	type:"get",
+			// 	url:"js/data.json",
+			// 	data:{ //请求数据的参数 url ? uname:"zhanshan"
+			// 		// uname:"zhanshan"  如果没有参数,这不需要设置
+			// 	},
+			// 	//请求成功时调用的函数
+			// 	success:function(data){  //data是形参名,代表的是服务器返回的数据
+			// 		console.log(data);  // 相当于 原生代码 的 var data = xhr.responseText; 
+			// 		//此处进行dom操作
+			// 		//创建ul
+			// 		var ul=$("<ul></ul>");
+			// 		//遍历返回的数据
+			// 		for(var i=0;i<data.length;i++){
+			// 			//得到数组中每一个元素
+			// 			var user=data[i];
+			// 			var li="<li>"+user.userName+"</li>";
+			// 			ul.append(li);
+			// 		}
+			// 		$("body").append(ul);
+					
+			// 	}
+			// })
+			$("#btn").click(function(){
+				$.ajax({
+					type:"get",
+					url:"js/data.json",
+					data:{ //请求数据的参数 url ? uname:"zhanshan"
+						// uname:"zhanshan"  如果没有参数,这不需要设置
+					},
+					//请求成功时调用的函数
+					success:function(data){  //data是形参名,代表的是服务器返回的数据
+						console.log(data);  // 相当于 原生代码 的 var data = xhr.responseText; 
+						//此处进行dom操作
+						//创建ul
+						var ul=$("<ul></ul>");
+						//遍历返回的数据
+						for(var i=0;i<data.length;i++){
+							//得到数组中每一个元素
+							var user=data[i];
+							var li="<li>"+user.userName+"</li>";
+							ul.append(li);
+						}
+						$("body").append(ul);
+						
+					}
+				})
+			})
+		</script>
+	</body>
+</html>

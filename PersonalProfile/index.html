@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=2.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="icon" href="favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="./css/index.css" />
+		<title>Welcome to YoYo's Personal Profile</title>
+	</head>
+	<body>
+		<!-- 
+		设计时忘记调回缩放比例，需
+		将浏览器缩放比例调至80%查看 
+		-->
+		<div id="home">
+		</div>
+		<!-- banner -->
+		<!-- 文字 -->
+		<a href="#About">
+		<div id="into">
+			INTO
+		</div>
+		</a>
+		<div id="tittle">
+			Welcome to YoYo's Personal Profile
+		</div>
+		<div id="close">
+			<img src="./img/x.png">
+		</div>
+		<div id="nav">
+			<div id="caidan">
+				<img src="./img/menu.png">
+			</div>
+			<ul class="navlist">
+				<li><a class="font" href="#">Home</a></li>
+				<li><a class="font" href="#About">About</a></li>
+				<li><a class="font" href="#ability">Ability</a></li>
+				<li><a class="font" href="#qualification">Qualification</a></li>
+				<li><a class="font" href="#contact">Contact</a></li>
+			</ul>
+		</div>
+
+		<!-- wapper -->
+		<div id="wapper">
+			<!-- about -->
+			<div class="about" id="About">
+				<div class="top">
+					<img src="./img/touxiang.jpg" style="cursor: pointer;">
+					<div class="left_top">
+						<span class="font blue">Yo Yo</span>
+						<br>
+						<span class="small">Web Design & Java Developer</span>
+						<br>
+						<span class="introduce font">At present, I am a student, majoring in JAVA<br>&nbsp;&nbsp;and I
+							also want to develop towards the full stack direction.<br>&nbsp; Web front end is still in
+							the basic learning stage, which needs to be improved</span>
+						<br>
+						<a href="#ability"><span class="more">READ MORE</span></a>
+					</div>
+					<div class="left_bottom">
+						<ul>
+							<li><img src="./img/git.png"></li>
+							<li><img src="./img/Face.png"></li>
+
+							<li><img src="./img/tuite.png"></li>
+							<li><img src="./img/xinhao.png"></li>
+						</ul>
+					</div>
+
+				</div>
+				<div class="bottom">
+					<div class="left_content">
+						<p>My Personal Introduction</p>
+						<span class="im">Name</span>
+						<span>:Yo Yo</span>
+						<br>
+						<span class="im">Birthday</span>
+						<span>:2001-01-12</span>
+						<br>
+						<span class="im">PHONE</span>
+						<span>:173 1400 3693</span>
+						<br>
+						<span class="im">ADDRESS</span>
+						<span>:JangXi JiAn</span>
+						<br>
+						<span class="im">E-MAIL</span>
+						<span>: Vis_Yang@163.com</span>
+						<br>
+						<span class="im">WEBSITE</span>
+						<span>: www.visyang.cn</span>
+						<br>
+						<a href="#contact"><span class="Hire">HIRE ME</span></a>
+					</div>
+					<div class="right_content">
+						<div class="dispaly01">
+							<img src="./img/diannao.png">
+							<br>
+							<span>web Design</span>
+							<br>
+							<p class="disc">Be able to design some small websites</p>
+						</div>
+						<div class="dispaly02">
+							<img src="./img/UI.png">
+							<br>
+							<span>UI Design</span>
+							<p class="disc">Able to design some front-end works, Can Use JavaFX design Gui Program </p>
+						</div>
+						<div class="dispaly03">
+							<img src="./img/pic.png">
+							<br>
+							<span>Photoshop Ai</span>
+							<p class="disc">Can use Photoshop and Ai simply </p>
+						</div>
+						<div class="dispaly04">
+							<img src="./img/shouji.png">
+							<br>
+							<span>Java Design</span>
+							<p class="disc">Able to write student management system independently</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- Ability -->
+		<div id="ability">
+			<p class="ti">Ability</p>
+			<img src="./img/person.gif">
+			<div class="javafx">
+			</div>
+
+			<div class="java">
+
+			</div>
+			<div class="js">
+
+			</div>
+			<div class="css">
+
+			</div>
+			<div class="html">
+			</div>
+			<ul class="data">
+				<li>html</li>
+				<li>css</li>
+				<li>js</li>
+				<li>java</li>
+				<li>javafx</li>
+			</ul>
+		</div>
+		<!-- Qualification -->
+		<div id="qualification">
+		<p class="titl">Qualification</p>
+		<img  class="zp1" src="./img/zp1.png" >
+		<img class="zp2" src="./img/zp2.png" >
+		</div>
+		<!-- Contact -->
+		<div id="contact">
+			<p class="titx">Contact</p>
+			<form action="#" method="post">
+				<input type="text" class="in" placeholder="Name"/>
+			
+			<input type="text" class="in" placeholder="Last Name"/>
+			<input type="text" class="in" placeholder="Email"/>
+			<input type="text" class="in" placeholder="Phone"/>
+			<textarea name="Message" placeholder="Message" required=""></textarea>
+			<input type="button" name="" class="bu" value="SEND" />
+			</form>
+		</div>
+		<!-- footer -->
+		<div id="footer">
+			Copyright © 2021 All Right Reserved
+		</div>
+<a href="#"><img class="top_im" src="./img/top.png" ></a>
+
+
+
+
+
+		<script type="text/javascript">
+			var caidan = document.querySelector('#caidan');
+			var navlist = document.querySelector('#nav .navlist');
+			var close = document.querySelector('#close img');
+			var isoff = true;
+			caidan.onclick = function() {
+				if (isoff) {
+					navlist.style.display = 'block';
+					close.style.visibility = 'visible';
+				}
+			}
+			close.onclick = function() {
+				navlist.style.display = 'none';
+				navlist.style.visibility = 'visible';
+				close.style.display = 'block';
+				close.style.visibility = 'hidden';
+			}
+		</script>
+	</body>
+</html>

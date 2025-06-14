@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>音乐播放器</title>
+		<link rel="stylesheet" type="text/css" href="./css/index.css"/>
+			</head>
+	<body>
+		<div id="wrapper">
+			<img src="img/193124568.jpg" >
+			<div id="lrc">
+				入深秋 未相拥<br>
+				
+				明月天涯故人游<br>
+				
+				琴声潇潇难解我心中忧愁<br>
+				
+				再回首 故人走<br>
+				
+				落叶纷飞泪不休<br>
+				
+				弹奏一曲爱恨叹江湖悠悠<br>
+				
+				望天涯 了牵挂<br>
+				
+				一念寸土一年华<br>
+				
+				落叶深秋未见故人的脸颊<br>
+				
+				梦中花 不见她<br>
+				
+				半生又折柳攀花<br>
+				
+				别过天涯西风落日落风沙<br>
+				
+				月照入心头<br>
+				
+				世间的爱恨情仇<br>
+				<span>more</span>
+			</div>
+			<div id="contorls">
+				<ul>
+					<li><img id="play" src="./img/播放.png" ></li>
+					<li><img id="pre" src="img/YDUI-上一曲.png" ></li>
+					<li><img id="next" src="img/YDUI-下一曲.png" ></li>
+					<li><img id="love" src="./img/收藏.png" ></li>
+					<li><img id="detele" src="./img/删除.png" ></li>
+				</ul>
+			</div>
+			
+		</div>
+		
+		<audio id="au" src="img/酷我音乐-无损音质正版在线试听网站.mp3">
+			当前浏览器不支持audio
+		</audio>
+		<script type="text/javascript">
+			var playbtn = document.getElementById("play");
+			var prebtn = document.getElementById("pre");
+			var nextbtn = document.getElementById("next");
+			var lovebtn = document.getElementById("love");
+			var detelebtn = document.getElementById("detele");
+			var music = document.getElementById("au");
+			playbtn.onclick = function() {
+				if (music.paused) {
+					music.play();
+					playbtn.src="img/暂停.png";
+				} else {
+					music.pause();
+					playbtn.src="./img/播放.png"
+				}
+			}
+			var flag=true;
+			lovebtn.onclick=function(){
+				flag=!flag;
+				if(flag){
+					lovebtn.src="img/收藏.png";
+				}else{
+					lovebtn.src="img/已收藏.png";
+				}
+			}			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./css/editormd.css" />
+		<title></title>
+	</head>
+	<body>
+		<div id="test-editor">
+			<textarea style="display:none;"></textarea>
+		</div>
+
+		<script src="./js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/editormd.amd.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/editormd.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var editor = editormd("test-editor", {
+				width: "100%",
+				height: 740,
+				path: './lib/',
+				pluginPath: "./plugins/",
+				theme: "dark",
+				previewTheme: "dark",
+				editorTheme: "pastel-on-dark",
+				markdown: "", //预设可编辑文本
+				htmlDecode: "style,script,iframe",
+				codeFold: true,
+				tabSize: 4,
+				indentUnit: 2,
+				autoLoadModules: true,
+				placeholder: "Enjoy Markdown! coding now...",
+				gotoLine: true,
+				syncScrolling: true,
+				saveHTMLToTextarea: false, // 保存 HTML 到 Textarea  false:不能保存
+				searchReplace: true,
+				imageUpload: true, //开启图片上传
+				imageFormats: ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+				imageUploadURL: "", //设置图片上传路径
+				dialogDraggable: false, //设置弹窗不可以拖拽
+			});
+			var blogcontent = encodeURIComponent(editor.getMarkdown());
+		</script>
+	</body>
+</html>

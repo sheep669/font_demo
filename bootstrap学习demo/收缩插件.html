@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>JavaScrit收缩插件</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
+	</head>
+	<body>
+		<a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample">
+			a标签点击展开
+		</a>
+		<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample">
+			button标签点击展开
+		</button>
+		<div class="collapse" id="collapseExample">
+			<!-- 一个好看的背景 -->
+			<div class="well">
+				lorem lorem lorem loerm lorem loerm
+			</div>
+		</div>
+		<hr >
+		<!-- 面板型 -->
+		<div class="panel-group">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h5 class="panel-title">
+						<a href="#" data-toggle="collapse" data-target="#channel_demo1">栏目管理</a>
+					</h5>
+				</div>
+				<div class="collapse panel-collapse" id="channel_demo1">
+					<div class="panel-body">
+						<ul class="list-unstyled">
+							<li><a href="">增加栏目</a></li>
+							<li><a href="">删除栏目</a></li>
+						</ul>
+					</div>
+					
+				</div>
+				
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h5 class="panel-title">
+						<a href="#" data-toggle="collapse" data-target="#channel_demo2">文件管理</a>
+					</h5>
+				</div>
+				<div class="collapse panel-collapse" id="channel_demo2">
+					<div class="panel-body">
+						<ul class="list-unstyled">
+							<li><a href="">复制文件</a></li>
+							<li><a href="">删除文件</a></li>
+						</ul>
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		<div id="taskshow" class="well">...</div>
+		
+		<hr >
+		<div class="panel-group">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h5 class="panel-title">
+						<a href="#" data-toggle="collapse" data-target="#channel_demo3">栏目管理</a>
+					</h5>
+				</div>
+				<div class="collapse panel-collapse" id="channel_demo3">
+						<ul class="list-group">
+							<li class="list-group-item"><a href="">增加栏目</a></li>
+							<li class="list-group-item"><a href="">删除栏目</a></li>
+						</ul>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+		<script src="js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+		<!-- js 操作展开框-->
+		<script type="text/javascript">
+			$('#channel_demo1').on('show.bs.collapse', function () {
+			  // do something…
+			  $("#taskshow").html("栏目管理展开了");
+			})
+			$('#channel_demo1').on('hide.bs.collapse', function () {
+			  // do something…
+			  $("#taskshow").html("栏目管理合上了");
+			})
+			
+			$('#channel_demo2').on('show.bs.collapse', function () {
+			  // do something…
+			  $("#taskshow").html("文件管理展开了");
+			})
+			$('#channel_demo2').on('hide.bs.collapse', function () {
+			  // do something…
+			  $("#taskshow").html("文件管理合上了");
+			})
+		</script>
+	</body>
+</html>

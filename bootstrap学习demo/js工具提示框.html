@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>JavaScript工具提示框</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
+	</head>
+	<body>
+		<!-- data-placement="top" 方向 data-toggle = "tooltip" 必须要这个,并且配合js才有效-->
+		<div style="margin: 200px;">
+			<button type="button" class="btn btn-danger" data-toggle = "tooltip" data-placement="top" title="此处可以点击">button</button>
+			<hr >
+			<button type="button" class="btn btn-success" id="xiansbtn">显示</button>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<script src="js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		// 找到了button并且加上了tooltip()方法  默认js
+			$('[data-toggle="tooltip"]').tooltip();
+		</script>
+		
+		<script type="text/javascript">
+			// js操作tooltip
+			$('#xiansbtn').click(function(){
+				// 点击显示
+				$('[data-toggle="tooltip"]').tooltip('show');
+				// 点击隐藏
+				// $('[data-toggle="tooltip"]').tooltip('hide');
+				// toggle 点击显示,再次点击消失,循环
+				// $('[data-toggle="tooltip"]').tooltip('toggle');
+			})
+		</script>
+		<script type="text/javascript">
+			// 加参数增加功能
+			$('[data-toggle="tooltip"]').tooltip({
+				// trigger:"click",//切换触发方式为点击,不能默认js一起用
+				// animation:"true", //加动画
+				// delay: { "show": 500, "hide": 100 },//加显示和隐藏时间
+			});
+		</script>
+	</body>
+</html>

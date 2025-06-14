@@ -1,0 +1,64 @@
+body {
+	background: url(../img/bg.jpg) no-repeat center top -7px;
+	background-size: 1540px;
+}
+table {
+	border: 1px solid #adadad;
+	padding: 0;
+	margin: 0 auto;
+	margin-top: 150px;
+	background-color: #656565;
+}
+
+table caption {
+	text-align: center;
+	font-size: large;
+	font-weight: bold;
+	color: #d6d36c;
+	margin-bottom: 25px;
+}
+
+table thead tr th {
+	text-align: left;
+	padding:5px;
+	color: white;
+}
+
+table thead tr th:nth-child(1) {
+	width: 200px;
+}
+
+table thead tr th:nth-child(2) {
+	width: 500px;
+	border-left: 0;
+}
+table tbody tr td{
+	padding:5px;
+}
+table tbody tr td:hover{
+	background-color:#d6d36c;
+}
+table tbody tr:nth-child(even) {
+	background-color: #C4EBF9;
+	color: black;
+}
+
+table tbody tr:nth-child(odd) {
+	background-color: #ffffff;
+	color: black;
+}
+table tfoot tr{
+	height: 30px;
+}
+table tfoot tr td {
+	text-align: center;
+	background-color: #656565;
+	color: white;
+    font-size: 16px;
+}
+table tfoot tr td:hover{
+	background-color:#3f3f3f;
+}
+
+
+

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>bootstrap组件续</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
+	</head>
+	<body>
+		<!-- 导航 -->
+		<!-- 选项导航 -->
+		<div class="container">
+			<!-- nav-tabs:tab页面样式  nav-xx : 导航样式 -->
+			<ul class="nav nav-tabs">
+				<!-- 默认选中 <li class="active"><a href="#">首页</a></li> -->
+				<li class="active"><a href="#">首页</a></li>
+				<li><a href="#">GitHub</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Code</a></li>
+			</ul>
+			<hr >
+			<!-- nav-pills:胶囊样式  nav-xx : 导航样式 -->
+			<ul class="nav nav-pills">
+				<!-- 默认选中 <li class="active"><a href="#">首页</a></li> -->
+				<li class="active"><a href="#">首页</a></li>
+				<li><a href="#">GitHub</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Code</a></li>
+			</ul>
+			<hr >
+			<!-- nav-pills nav-stacked:胶囊竖立  nav-xx : 导航样式 -->
+			<ul class="nav nav-pills nav-stacked">
+				<!-- 默认选中 <li class="active"><a href="#">首页</a></li> -->
+				<li class="active"><a href="#">首页</a></li>
+				<li><a href="#">GitHub</a></li>
+				<li><a href="#">Blog</a></li>
+				<!-- <li class="nav-divider"></li> 分割线 -->
+				<li><a href="#">Code</a></li>
+			</ul>
+			<!-- nav-justified 自适应,等分,铺满容器 -->
+			<ul class="nav nav-tabs nav-justified">
+				<!-- 默认选中 <li class="active"><a href="#">首页</a></li> -->
+				<li class="active"><a href="#">首页</a></li>
+				<li><a href="#">GitHub</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">Code</a></li>
+			</ul>
+			
+			<!-- 二级导航 -->
+			<ul class="nav nav-tabs">
+				<!-- 默认选中 <li class="active"><a href="#">首页</a></li> -->
+				<li class="active"><a href="#" class="dropdown-toggle" data-toggle = "dropdown">首页<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="#">item</a></li>
+					<li><a href="#">item</a></li>
+					<li><a href="#">item</a></li>
+				</ul>
+				</li>
+				<li><a href="#">GitHub</a>
+				</li>
+				<li><a href="#">Blog</a>
+				</li>
+				<li><a href="#">Code</a>
+				</li>
+			</ul>
+			
+			<!-- 导航条 -->
+			<nav class="navbar navbar-default">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">导航</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a href="#">首页</a></li>
+					<li><a href="#">GitHub</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Code</a></li>
+				</ul>
+				
+				<!-- 加文本 加链接 加按钮 一般不用 -->
+<!-- 			<p class="navbar-text">文本</p>
+				<a href="#" class="navbar-link">链接</a>
+				<button type="button" class="btn btn-default navbar-btn">按钮</button> -->
+				
+				
+				<!-- 加入表单 -->
+				<!-- 搜索右移 pull-right -->
+				<!-- <form class="navbar-form pull-right">
+					<div class="form-group">
+						<input type="text" class="form-control"/>
+					</div>
+					<button type="button" class="btn btn-success">搜索</button>
+				</form> -->
+				
+				<!-- 搜索右移 边距自定义 -->
+				<form class="navbar-form navbar-right" style="margin-right: 20px;">
+					<div class="form-group">
+						<input type="text" class="form-control"/>
+					</div>
+					<button type="button" class="btn btn-success">搜索</button>
+				</form>
+				
+			</nav>
+			
+			<!-- 顶部固定导航 -->
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">导航</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a href="#">首页</a></li>
+					<li><a href="#">GitHub</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Code</a></li>
+				</ul>
+			</nav>
+			
+			<!-- 底部固定导航 -->
+			<nav class="navbar navbar-default navbar-fixed-bottom">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">导航</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a href="#">首页</a></li>
+					<li><a href="#">GitHub</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Code</a></li>
+				</ul>
+			</nav>
+			<!-- 全屏方角导航 -->
+			<nav class="navbar navbar-default navbar-static-top">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">导航</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a href="#">首页</a></li>
+					<li><a href="#">GitHub</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Code</a></li>
+				</ul>
+			</nav>
+			<!-- 全屏方角反色导航 -->
+			<nav class="navbar navbar-inverse navbar-fixed-top">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">导航</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a href="#">首页</a></li>
+					<li><a href="#">GitHub</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Code</a></li>
+				</ul>
+			</nav>	
+		</div>
+		<script src="js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

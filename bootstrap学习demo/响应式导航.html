@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>bootstrap响应式导航</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
+	</head>
+	<body>
+		
+			<!-- 响应式导航 -->
+			<nav class="navbar navbar-inverse navbar-static-top">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+						<span class="sr-only">Toggle navigtion</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<!-- 三条横线 -->
+					</button>
+					<a href="#" class="navbar-brand">导航</a>	
+				</div>
+				<div class="collapse navbar navbar-responsive-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="#">首页</a></li>
+					<li><a href="#">GitHub</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Code</a></li>
+				</ul>
+				</div>
+			</nav>
+		
+		<!-- 面包屑导航 -->
+		<ul class="breadcrumb">
+			<li><a href="">首页</a></li>
+			<li><a href="">新闻</a></li>
+			<li><a href="">国内新闻</a></li>
+			<li><a href="">高考专题</a></li>
+		</ul>
+		<!-- 分页导航 -->
+		<!-- pagination-xx 调整大小 -->
+		<ul class="pagination">
+			<li><a href="">&laquo;</a></li>
+			<li><a href="">1</a></li>
+			<li class="active"><a href="">2</a></li>
+			<li><a href="">3</a></li>
+			<li><a href="">4</a></li>
+			<li><a href="">&raquo;</a></li>
+		</ul>
+		
+		<!--翻页导航 class="pager-->
+		<ul class="pager">
+			<li><a href="">上一页</a></li>
+			<li><a href="">下一页</a></li>
+		</ul>
+		<script src="js/jquery-3.6.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
